@@ -1,0 +1,17 @@
+{
+  "model": "xgboost",
+  "device": "cuda",
+  "best_cv_macro_f1": 0.9293681931181629,
+  "n_trials": 30,
+  "n_splits": 3,
+  "seed": 42,
+  "params": {
+    "n_estimators": 353,
+    "max_depth": 10,
+    "learning_rate": 0.06062291128201002,
+    "subsample": 0.8019691866431768,
+    "colsample_bytree": 0.5217216959604557,
+    "min_child_weight": 2.2396650750723457,
+    "reg_lambda": 0.09356436535970507
+  }
+}

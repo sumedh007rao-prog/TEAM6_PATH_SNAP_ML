@@ -1,0 +1,53 @@
+{
+  "logistic_regression": {
+    "family": "Linear / probabilistic",
+    "default_params": {
+      "C": 1.0,
+      "max_iter": 300,
+      "solver": "lbfgs",
+      "class_weight": null
+    },
+    "max_train_rows": null
+  },
+  "knn": {
+    "family": "Instance-based",
+    "default_params": {
+      "n_neighbors": 25,
+      "weights": "uniform",
+      "p": 2
+    },
+    "max_train_rows": 150000
+  },
+  "decision_tree": {
+    "family": "Tree-based",
+    "default_params": {
+      "max_depth": 10,
+      "min_samples_leaf": 50,
+      "criterion": "gini"
+    },
+    "max_train_rows": null
+  },
+  "random_forest": {
+    "family": "Ensemble (bagging)",
+    "default_params": {
+      "n_estimators": 100,
+      "max_depth": 14,
+      "min_samples_leaf": 20,
+      "max_features": "sqrt"
+    },
+    "max_train_rows": 600000
+  },
+  "xgboost": {
+    "family": "Boosting",
+    "default_params": {
+      "n_estimators": 300,
+      "max_depth": 6,
+      "learning_rate": 0.1,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "min_child_weight": 1.0,
+      "reg_lambda": 1.0
+    },
+    "max_train_rows": null
+  }
+}

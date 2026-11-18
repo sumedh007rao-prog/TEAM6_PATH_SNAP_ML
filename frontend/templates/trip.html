@@ -1,0 +1,26 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Trip {{ trip_id }}</title>
+<style>
+ body{font-family:system-ui,sans-serif;margin:0}
+ header{padding:10px 16px;background:#f4f4f4;border-bottom:1px solid #ddd}
+ .wrap{display:flex;gap:16px;padding:12px;height:calc(100vh - 70px)}
+ iframe{flex:1;border:1px solid #ccc;min-width:0}
+ aside{width:380px;overflow:auto}
+ table{border-collapse:collapse;width:100%;font-size:14px}
+ td,th{border-bottom:1px solid #e3e3e3;padding:5px 6px;text-align:right} td:first-child,th:first-child{text-align:left}
+</style></head><body>
+<header><a href="{{ url_for('index') }}">&larr; all trips</a> &nbsp; <b>Trip {{ trip_id }}</b>
+ &middot; {{ res.n_observations }} GPS points &middot; model: {{ res.model }}</header>
+<div class="wrap">
+ <iframe src="{{ url_for('map_view', trip_id=trip_id) }}"></iframe>
+ <aside>
+  <table><tr><th>Metric</th><th>Classifier only</th><th>+ HMM</th></tr>
+  {% for label, a, b in rows %}
+   <tr><td>{{ label }}</td>
+       <td>{{ '%.3f'|format(a) if a is number and a is not integer else a }}</td>
+       <td>{{ '%.3f'|format(b) if b is number and b is not integer else b }}</td></tr>
+  {% endfor %}</table>
+  <p>Candidate miss rate: {{ res.metrics.get('candidate_miss_rate') }}</p>
+  <p>Inference time (s): {{ res.timing_s }}</p>
+ </aside>
+</div></body></html>

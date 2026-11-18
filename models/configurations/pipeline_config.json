@@ -1,0 +1,60 @@
+{
+  "model_name": "xgboost",
+  "model_params": {
+    "n_estimators": 353,
+    "max_depth": 10,
+    "learning_rate": 0.06062291128201002,
+    "subsample": 0.8019691866431768,
+    "colsample_bytree": 0.5217216959604557,
+    "min_child_weight": 2.2396650750723457,
+    "reg_lambda": 0.09356436535970507
+  },
+  "used_tuned_params": true,
+  "feature_columns": [
+    "dist_m",
+    "dist_rank",
+    "dist_gap_to_best",
+    "dist_ratio_to_best",
+    "proj_frac",
+    "dist_to_arc_end_m",
+    "arc_len_m",
+    "n_cands",
+    "heading_diff_deg",
+    "heading_cos",
+    "speed_mps",
+    "heading_reliable",
+    "step_prev_m",
+    "dt_prev",
+    "to_node_out_deg",
+    "from_node_in_deg",
+    "has_reverse_arc",
+    "neigh_presence",
+    "neigh_mean_dist"
+  ],
+  "feature_config": {
+    "radius_m": 60.0,
+    "max_candidates": 10,
+    "spacing_m": 10.0,
+    "heading_window": 2,
+    "min_move_m": 3.0,
+    "neighbour_offsets": [
+      -3,
+      -2,
+      -1,
+      1,
+      2,
+      3
+    ]
+  },
+  "hmm_config": {
+    "emission_weight": 0.5,
+    "hop_cost": 2.0,
+    "far_cost": 12.0,
+    "uturn_cost": 1.0,
+    "max_hops": 3,
+    "gap_seconds": 20.0,
+    "prob_floor": 1e-06,
+    "fill_empty": true
+  },
+  "seed": 42
+}

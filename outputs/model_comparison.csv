@@ -1,0 +1,6 @@
+Model,Algorithm family,Key configuration,CV macro F1,Top-1 accuracy (student),Route continuity,Student-test macro F1,Log loss,Inference ms / 1k obs
+logistic_regression,Linear / probabilistic,"{""C"": 1.0, ""max_iter"": 300, ""solver"": ""lbfgs"", ""class_weight"": null}",0.9186,0.8545,0.7093,0.9168,0.125,0.2
+knn,Instance-based,"{""n_neighbors"": 25, ""weights"": ""uniform"", ""p"": 2}",0.916,0.8505,0.7156,0.9145,0.1861,1159.9
+decision_tree,Tree-based,"{""max_depth"": 10, ""min_samples_leaf"": 50, ""criterion"": ""gini""}",0.9229,0.8683,0.7356,0.9248,0.0952,0.5
+random_forest,Ensemble (bagging),"{""n_estimators"": 100, ""max_depth"": 14, ""min_samples_leaf"": 20, ""max_features"": ""sqrt""}",0.9254,0.8715,0.7315,0.9266,0.0862,12.8
+xgboost,Boosting,"{""n_estimators"": 300, ""max_depth"": 6, ""learning_rate"": 0.1, ""subsample"": 0.8, ""colsample_bytree"": 0.8, ""min_child_weight"": 1.0, ""reg_lambda"": 1.0}",0.9264,0.8832,0.7641,0.9335,0.0819,10.7

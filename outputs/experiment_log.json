@@ -1,0 +1,9 @@
+{
+  "seed": 42,
+  "cv_folds": 5,
+  "cv_row_cap": 400000,
+  "n_trials": 30,
+  "optimisation_seconds": 944.783764699996,
+  "selected_model": "xgboost",
+  "used_tuned_params": true
+}
